@@ -7,6 +7,7 @@ import config
 import core
 import extensionPoints
 import globalPluginHandler
+import globalVars
 import gui
 from gui.settingsDialogs import SettingsPanel
 import languageHandler
@@ -128,6 +129,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(VoicesSettingsPanel)
 
     def checkLicense(self):
+            # Do not show activation dialog neither voice manager during install or silent install
+        if globalVars.appArgs.install or globalVars.appArgs.installSilent:
+                return
         if not self.licenseManager.checkLicenseValidity():
             self.interface.showActivationDialog()
         else:
