@@ -6,10 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: tiflotecniaVoices 4.0.0\n"
-"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2024-05-01 19:40+0400\n"
-"PO-Revision-Date: 2025-01-24 15:59+0800\n"
+"Project-Id-Version: tiflotecniaVoices 4.1.0\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2025-04-22 01:08+0800\n"
+"PO-Revision-Date: 2025-06-07 19:53+0800\n"
 "Last-Translator: Alan <alanzhangmw@outlook.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -281,7 +281,7 @@ msgstr "管理语音(&V)..."
 
 #: addon\globalPlugins\tiflotecniaVoices\interface.py:105
 msgid "Manages voices installations and removals"
-msgstr "管理语音安装和移除"
+msgstr "管理语音的安装和移除"
 
 #: addon\globalPlugins\tiflotecniaVoices\interface.py:107
 msgid "&Remove license"
@@ -316,51 +316,63 @@ msgstr "关于 {name}(&A)..."
 msgid "Shows about dialog"
 msgstr "显示关于对话框"
 
-#: addon\synthDrivers\tiflotecniaVoices\__init__.py:31
+#: addon\synthDrivers\tiflotecniaVoices\__init__.py:51
 #, python-brace-format
 msgid "{0} MS"
 msgstr "{0} MS"
 
-#: addon\synthDrivers\tiflotecniaVoices\__init__.py:34
+#: addon\synthDrivers\tiflotecniaVoices\__init__.py:54
 msgid "Lowest"
 msgstr "最小"
 
-#: addon\synthDrivers\tiflotecniaVoices\__init__.py:35
+#: addon\synthDrivers\tiflotecniaVoices\__init__.py:55
 msgid "enhanced"
 msgstr "增强"
 
-#: addon\synthDrivers\tiflotecniaVoices\__init__.py:36
+#: addon\synthDrivers\tiflotecniaVoices\__init__.py:56
 msgid "Intermediate"
 msgstr "中等"
 
-#: addon\synthDrivers\tiflotecniaVoices\__init__.py:37
-#: addon\synthDrivers\tiflotecniaVoices\__init__.py:38
+#: addon\synthDrivers\tiflotecniaVoices\__init__.py:57
+#: addon\synthDrivers\tiflotecniaVoices\__init__.py:58
 msgid "highest"
 msgstr "最高"
 
-#: addon\synthDrivers\tiflotecniaVoices\__init__.py:170
+#: addon\synthDrivers\tiflotecniaVoices\__init__.py:190
 msgid "Automatically switch language based on unicode characters"
 msgstr "基于unicode字符自动切换语言"
 
-#: addon\synthDrivers\tiflotecniaVoices\__init__.py:171
+#: addon\synthDrivers\tiflotecniaVoices\__init__.py:191
 msgid "&Pauses between sentences"
 msgstr "句子之间停顿(&P)"
 
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+#: buildVars.py:23
+msgid "Tiflotecnia voices for NVDA"
+msgstr "Tiflotecnia Voice For NVDA"
+
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-#: buildVars.py:24 buildVars.py:28
-msgid "Tiflotecnia voices for NVDA"
-msgstr "NVDA 的 Tiflotecnia 语音"
+#: buildVars.py:26
+msgid ""
+"Tiflotecnia voices for NVDA\n"
+"NVDA driver to the Cerence Embedded TTS synth\n"
+"License required to use the voices."
+msgstr ""
+"Tiflotecnia Voice For NVDA\n"
+"Cerence 嵌入式 TTS 的 NVDA 语音合成器驱动\n"
+"使用语音需要许可证。"
 
-#: buildVars.py:25
-msgid "Tiflotecnia &voices for NVDA"
-msgstr "NVDA 的 Tiflotecnia 语音(&V)"
+#~ msgid "Tiflotecnia &voices for NVDA"
+#~ msgstr "Tiflotecnia Voice For NVDA"
 
 #~ msgid "&Tiflotecnia voices for NVDA"
-#~ msgstr "Голоса Tiflotecnia для NVDA"
+#~ msgstr "Tiflotecnia Voice For NVDA"
 
 #~ msgid "&User guide..."
-#~ msgstr "&Руководство пользователя..."
+#~ msgstr "用户指南..."
 
 #~ msgid "Opens user guide"
-#~ msgstr "Открывает руководство пользователя"
+#~ msgstr "打开用户指南"

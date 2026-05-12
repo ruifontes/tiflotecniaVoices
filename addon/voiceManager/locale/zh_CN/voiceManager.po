@@ -1,0 +1,292 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AccessMindVoiceManager\n"
+"POT-Creation-Date: 2024-04-15 22:41+0400\n"
+"PO-Revision-Date: 2025-01-24 16:00+0800\n"
+"Last-Translator: Alan <alanzhangmw@outlook.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-KeywordsList: _;_n:1,2\n"
+"X-Poedit-SearchPath-0: MainWindow.cs\n"
+"X-Poedit-SearchPath-1: DownloadProgress.cs\n"
+
+#: DownloadProgress.cs:18
+msgid "Downloading voice"
+msgstr "正在下载语音"
+
+#: DownloadProgress.cs:19
+msgid "Cancel"
+msgstr "取消"
+
+#: DownloadProgress.cs:20
+msgid "Downloading"
+msgstr "下载中"
+
+#: DownloadProgress.cs:27
+#, csharp-format
+msgid "Downloading voice {0}_{1}, {2} of {3}"
+msgstr "正在下载语音 {3} 的 {0}_{1}, {2}"
+
+#: DownloadProgress.cs:59
+msgid "Do you want to cancel downloads?"
+msgstr "要取消下载吗？"
+
+#: DownloadProgress.cs:59 MainWindow.cs:223
+msgid "Downloads in progress"
+msgstr "下载进行中"
+
+#: LocaleMapper.cs:78
+msgid "Gulf Arabic"
+msgstr "海湾阿拉伯语"
+
+#: LocaleMapper.cs:79
+msgid "Bhojpuri (India)"
+msgstr "比哈尔与（印度）"
+
+#: LocaleMapper.cs:80
+msgid "Dongbei (China)"
+msgstr "东北话（中国）"
+
+#: LocaleMapper.cs:81
+msgid "Shanghainese (China)"
+msgstr "上海话（中国）"
+
+#: LocaleMapper.cs:82
+msgid "Sichuanese (China)"
+msgstr "四川话（中国）"
+
+#: LocaleMapper.cs:83
+msgid "Shaanxi (China)"
+msgstr "陕西话（中国）"
+
+#: LocaleMapper.cs:84
+msgid "Valencian (Spain)"
+msgstr "巴伦西亚语（ 西班牙）"
+
+#: MainWindow.cs:44 MainWindow.cs:112 MainWindow.cs:116 MainWindow.cs:144
+msgid "All"
+msgstr "全部"
+
+#: MainWindow.cs:63
+#, csharp-format
+msgid "{0} voice manager"
+msgstr "{0} 语音管理器"
+
+#: MainWindow.cs:64
+msgid "&Language:"
+msgstr "语言(&L)："
+
+#: MainWindow.cs:65
+msgid "Q&uality:"
+msgstr "质量(&U)："
+
+#: MainWindow.cs:66
+msgid "&Voices:"
+msgstr "语音(&V)："
+
+#: MainWindow.cs:67
+msgid "Voice name"
+msgstr "语音名称"
+
+#: MainWindow.cs:68
+msgid "Language"
+msgstr "语言"
+
+#: MainWindow.cs:69
+msgid "Quality"
+msgstr "质量"
+
+#: MainWindow.cs:70
+msgid "Size"
+msgstr "大小"
+
+#: MainWindow.cs:71
+msgid "Status"
+msgstr "状态"
+
+#: MainWindow.cs:72
+msgid "&Install selected"
+msgstr "安装所选(&I)"
+
+#: MainWindow.cs:73
+msgid "Install from a local &file..."
+msgstr "从本地文件安装(&F)"
+
+#: MainWindow.cs:74
+msgid "&Remove selected"
+msgstr "移除所选(&R)"
+
+#: MainWindow.cs:75
+msgid "Remove &all"
+msgstr "移除全部(&A)"
+
+#: MainWindow.cs:76
+msgid "&Close"
+msgstr "关闭(&C)"
+
+#: MainWindow.cs:124
+msgid "B"
+msgstr "V"
+
+#: MainWindow.cs:124
+msgid "KB"
+msgstr "KB"
+
+#: MainWindow.cs:124
+msgid "MB"
+msgstr "MB"
+
+#: MainWindow.cs:124
+msgid "GB"
+msgstr "GB"
+
+#: MainWindow.cs:124
+msgid "TB"
+msgstr "TB"
+
+#: MainWindow.cs:124
+msgid "PB"
+msgstr "PB"
+
+#: MainWindow.cs:124
+msgid "EB"
+msgstr "EB"
+
+#: MainWindow.cs:162
+msgid "installed"
+msgstr "已安装"
+
+#: MainWindow.cs:162
+msgid "Available for download"
+msgstr "可下载"
+
+#: MainWindow.cs:189
+msgid ""
+"Could not fetch voice list from network. Only offline installations will be "
+"available"
+msgstr "无法从网络获取语音列表。仅可离线安装"
+
+#: MainWindow.cs:189
+msgid "Warning"
+msgstr "警告"
+
+#: MainWindow.cs:223
+msgid "Do you really want to quit this app?"
+msgstr "您真的要退出此应用程序吗？"
+
+#: MainWindow.cs:256
+#, csharp-format
+msgid "Do you want to install voice {0}_{1}?"
+msgstr "你想安装语音 {0}_{1} 吗？"
+
+#: MainWindow.cs:256
+msgid "Install voice"
+msgstr "安装语音"
+
+#: MainWindow.cs:266
+msgid "Integrity check Failed! This archive cannot be installed."
+msgstr "完整性检查失败！无法安装此存档。"
+
+#: MainWindow.cs:266 MainWindow.cs:287 MainWindow.cs:296 MainWindow.cs:376
+msgid "Error"
+msgstr "错误"
+
+#: MainWindow.cs:287
+msgid "Destination directory cannot be created"
+msgstr "无法创建目标目录"
+
+#: MainWindow.cs:296
+#, csharp-format
+msgid "Voice cannot be installed {0}"
+msgstr "无法安装语音 {0}"
+
+#: MainWindow.cs:305
+msgid "Success!"
+msgstr "成功！"
+
+#: MainWindow.cs:306
+#, csharp-format
+msgid "{0}_{1} has been successfully installed!"
+msgstr "{0}_{1} 已成功安装！"
+
+#: MainWindow.cs:326
+msgid "Download canceled!"
+msgstr "下载取消！"
+
+#: MainWindow.cs:326
+msgid "Canceled"
+msgstr "取消"
+
+#: MainWindow.cs:376
+msgid "Integrity check failled. Voice could not be installed"
+msgstr "完整性检查失败。无法安装语音"
+
+#: MainWindow.cs:391
+#, csharp-format
+msgid "&Install {0} voice"
+msgid_plural "&Install {0} voices"
+msgstr[0] "安装 {0}  语音(&I)"
+msgstr[1] "安装 {0}  语音(&I)"
+msgstr[2] "安装 {0}  语音(&I)"
+
+#: MainWindow.cs:392
+#, csharp-format
+msgid "&Remove {0} voice"
+msgid_plural "&Remove {0} voices"
+msgstr[0] "删除 {0} 个语音(&R)"
+msgstr[1] "删除 {0} 个语音(&R)"
+msgstr[2] "删除 {0} 个语音(&R)"
+
+#: MainWindow.cs:397 MainWindow.cs:429
+#, csharp-format
+msgid ""
+"Do you want to proceed with this action? {0} voice will be removed from your "
+"computer."
+msgid_plural ""
+"Do you want to proceed with this action? {0} voices will be removed from "
+"your computer."
+msgstr[0] "你想继续吗？ {0} 个语音将从计算机中删除。"
+msgstr[1] "你想继续吗？ {0} 个语音将从计算机中删除。"
+msgstr[2] "你想继续吗？ {0} 个语音将从计算机中删除。"
+
+#: MainWindow.cs:397 MainWindow.cs:429
+msgid "Confirmation"
+msgstr "确认"
+
+#: MainWindow.cs:409
+msgid "All voices were removed from computer"
+msgstr "计算机中的所有语音均已删除"
+
+#: MainWindow.cs:409 MainWindow.cs:441
+msgid "Success"
+msgstr "成功"
+
+#: MainWindow.cs:441
+msgid "All selected voices were removed from computer"
+msgstr "已从计算机中删除所有选定的语音"
+
+#: QualityMap.cs:9
+msgid "Lowest"
+msgstr "最小"
+
+#: QualityMap.cs:10
+msgid "Enhanced"
+msgstr "增强"
+
+#: QualityMap.cs:11
+msgid "Intermediate"
+msgstr "中等"
+
+#: QualityMap.cs:12 QualityMap.cs:13
+msgid "Highest"
+msgstr "最高"
+
+#~ msgid "Not implemented yet"
+#~ msgstr "尚未执行"
