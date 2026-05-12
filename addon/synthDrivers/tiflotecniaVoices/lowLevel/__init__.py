@@ -5,7 +5,7 @@ import contextlib
 from ctypes import *
 
 from .structs import *
-from .languages import getLocaleNameFromTLW
+from .languages import getLocaleNameFromTLW, getTLWFromLocaleName
 
 from globalPlugins.tiflotecniaVoices.utils import *
 
@@ -270,6 +270,18 @@ def getSpeechDBList(languageName, voiceName):
     for i in range(nItems.value):
         voiceModels.append(speechDBInfos[i].szVoiceOperatingPoint.decode("utf-8"))
     return voiceModels
+
+def getNativeAndForeignLanguages():
+    languages = set()
+    for l in getLanguageList():
+        languages.add(l.szLanguageTLW)
+        for v in getVoiceList(l.szLanguage):
+            if not v.szForeignLanguages:
+                continue
+            for fl in v.szForeignLanguages.split(b','):
+                languages.add(fl.upper())
+    return languages
+
 
 def resourceLoad(contentType, content, instance):
     length = len(content)

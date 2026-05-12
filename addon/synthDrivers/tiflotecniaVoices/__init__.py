@@ -86,6 +86,15 @@ def getAvailableResources():
 
     return resources
 
+def getAvailableLanguages():
+    languages = set()
+    for l in lowLevel.getNativeAndForeignLanguages():
+        langCode = lowLevel.getLocaleNameFromTLW(l.decode("utf-8"))
+        if langCode is None:
+            continue
+        languages.add(langCode)
+    return languages
+
 class BgThread(threading.Thread):
 
     def __init__(self, bgQueue):
@@ -236,6 +245,7 @@ class SynthDriver(SynthDriver):
         self._veCallback = VE_CBOUTNOTIFY(VECallback(self._player, self._isSilence, self._onIndexReached))
 
         self._resources = getAvailableResources()
+        self.availableLanguages = getAvailableLanguages()
         self._languageDetector = languageDetection.LanguageDetector([l.id for l in self._resources])
         self._enableUnicodeLanguageSwitching = False
         self._waitfactor = 1
@@ -298,6 +308,7 @@ class SynthDriver(SynthDriver):
     def speak(self, speechSequence):
         currentInstance = defaultInstance = self.voiceInstance
         currentLanguage = defaultLanguage = self.language
+        defaultTlw = lowLevel.getTLWFromLocaleName(defaultLanguage)
         chunks = []
         hasText = False
         charMode = False
@@ -324,6 +335,7 @@ class SynthDriver(SynthDriver):
                 if command.lang is None:
                     currentInstance = defaultInstance
                     currentLanguage = defaultLanguage
+                    chunks.append(f"\x1b\\lang={defaultTlw}\\")
                     continue
                 currentLanguage = command.lang
                 newVoiceName = self.getVoiceNameForLanguage(currentLanguage)
@@ -336,6 +348,9 @@ class SynthDriver(SynthDriver):
                     self._bgQueue.put(TtsSetParamList(newInstance, (Param.PITCH, self.getParameter(self.voiceInstance, Param.PITCH))))
                     self._bgQueue.put(TtsSetParamList(newInstance, (Param.VOLUME, self.getParameter(self.voiceInstance, Param.VOLUME))))
                 if newInstance == currentInstance:
+                    tlw = lowLevel.getTLWFromLocaleName(currentLanguage)
+                    if tlw is not None:
+                        chunks.append(f"\x1b\\lang={tlw}\\")
                     continue
                 if hasText:
                     self._speak(currentInstance, chunks)
@@ -358,6 +373,10 @@ class SynthDriver(SynthDriver):
             else:
                 log.error(f"Unknown speech: {command}")
         if chunks:
+            if currentLanguage != defaultLanguage:
+                # Return to the default language of the voice.
+                # This ensures that the language is always reset for a new sequence.
+                chunks.append(f"\x1b\\lang={defaultTlw}\\")
             self._speak(currentInstance, chunks)
         self._bgQueue.put(DoneSpeaking(self._player, self._onIndexReached))
 
